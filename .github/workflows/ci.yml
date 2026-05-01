@@ -1,0 +1,31 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: 🟢 Installer Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 📦 Installer dépendances
+        run: npm install
+
+      - name: 🚀 Lancer l'app
+        run: npm start &
+
+      - name: ⏳ Attendre que l'app démarre
+        run: npx wait-on http://localhost:3000
+
+      - name: 🧪 Lancer Cypress
+        run: npx cypress run
