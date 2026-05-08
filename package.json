@@ -1,4 +1,13 @@
 {
+  "name": "cypress-project",
+  "version": "1.0.0",
+  "description": "Cypress for automation testing",
+  "main": "index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  
+  
   "scripts": {
     "start": "node server.js"
   }
