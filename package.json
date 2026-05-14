@@ -13,5 +13,15 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run --browser chrome",
     "cy:verify": "cypress verify"
+  },
+"author": "ZeroDayTom",
+"license": "Private",
+"devDependencies": {
+  "cypress": "^15.15.0",
+  "eslint": "^10.3.0",
+  "eslint-plugin-cypress": "^5.2.0",
+  "mocha-junit-reporter": "^2.2.1",
+  "typescript": "^6.0.3",
+  "typescript-eslint": "^8.59.3"
   }
 }
